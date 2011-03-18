@@ -42,6 +42,7 @@ compactness-theorems.txt
 
 	Lines that do not begin with @ are comments for human readers.
 
+cardinality-theorems.txt
 connectedness-theorems.txt
 metric-space-theorems.txt
 separation-theorems.txt
