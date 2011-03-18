@@ -1,4 +1,8 @@
 Cardinality
+57 Countable
+58 Card < c
+59 Card = c
+60 Card <= 2^c
 
 Countable implies Card < c
 @ -57 58
@@ -6,7 +10,8 @@ Countable implies Card < c
 Card < c implies not (Card = c)
 @ -58 -59
 
-Card <= 2^c iff Card < c or Card = c
-@ -60 58 59
+Card < c implies Card <= 2^c
 @ -58 60
+
+Card = c implies Card <= 2^c
 @ -59 60
