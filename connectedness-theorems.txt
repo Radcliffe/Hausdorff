@@ -1,0 +1,69 @@
+CONNECTEDNESS THEOREMS
+======================
+
+Ultraconnected implies Path connected
+@ -40 37
+
+Arc connected implies Path connected
+@ -38 37
+
+Path connected implies Connected
+@ -37 36
+
+Hyperconnected implies Connected
+@ -39 36
+
+Hyperconnected implies Locally connected
+@ -39 41
+
+Locally arc connected implies Locally path connected
+@ -43 42
+
+Locally path connected implies Locally connected
+@ -42 41
+
+Discrete implies Extremally disconnected
+@ -52 49
+
+Discrete implies Scattered and T1
+@ -52 51
+@ -52 2
+
+Scattered and T1 implies Totally disconnected
+@ -51 -2 47
+
+Totally disconnected implies Totally pathwise disconnected
+@ -47 46
+
+Extremally disconnected implies Totally separated
+@ -49 48
+
+Totally separated implies Totally disconnected
+@ -48 47
+
+Totally separated implies Urysohn
+@ -48 9
+
+Zero dimensional and T0 implies Regular
+@ -50 -1 11
+
+Zero dimensional and T0 implies Totally separated
+@ -50 -1 48
+
+Has dispersion point implies Biconnected
+@ -45 44
+
+Biconnected implies Connected
+@ -44 36
+
+Strongly connected implies connected
+@ -61 36
+
+Urysohn implies not strongly connected
+@ -9 -61
+
+Regular and connected implies uncountable
+@ -11 -36 -56
+
+Connected and not strongly connected implies cardinality >= c
+@ -36 -61 -58

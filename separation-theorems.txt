@@ -1,0 +1,89 @@
+1 T0
+2 T1
+3 T2 (Hausdorff)
+4 T2.5 (Completely Hausdorff)
+5 T3
+6 T3.5
+7 T4
+8 T5
+9 Urysohn
+10 Semiregular
+11 Regular
+12 Completely regular
+13 Normal
+14 Completely normal
+15 Perfectly normal
+
+Regular is equivalent to T0 and T3
+@ -11 1
+@ -11 5
+@ -1 -5 11
+
+Normal is equivalent to T4 and T1
+@ -13 2
+@ -13 7
+@ -2 -7 13
+
+Completely normal is equivalent to T5 and T1
+@ -14 2
+@ -14 8
+@ -2 -8 14
+
+Completely regular is equivalent to T3.5 and T0
+@ -12 1
+@ -12 6
+@ -1 -6 12
+
+T5 implies T4
+@ -8 7
+
+T4 and T3 implies T3.5
+@ -5 -7 6
+
+Normal implies T3.5
+@ -13 6
+
+T3.5 implies T3
+@ -6 5
+
+Completely normal implies Normal
+@ -14 13
+
+Regular implies T2.5
+@ -11 4
+
+T3 and T2 imply T2.5
+@ -3 -5 4
+
+T2.5 implies T2
+@ -4 3
+
+T2 implies T1
+@ -3 2
+
+T1 implies T0
+@ -2 1
+
+Perfectly normal implies Completely normal
+@ -15 14
+
+Completely normal implies Normal
+@ -14 13
+
+Normal implies T3.5
+@ -13 6
+
+T3.5 implies Urysohn
+@ -6 9
+
+T3.5 implies Regular
+@ -6 11
+
+Urysohn implies T2.5
+@ -9 4
+
+Urysohn implies Semiregular
+@ -9 10
+
+Semiregular implies T2
+@ -10 3

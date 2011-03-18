@@ -1,0 +1,12 @@
+Cardinality
+
+Countable implies Card < c
+@ -57 58
+
+Card < c implies not (Card = c)
+@ -58 -59
+
+Card <= 2^c iff Card < c or Card = c
+@ -60 58 59
+@ -58 60
+@ -59 60

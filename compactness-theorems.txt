@@ -1,0 +1,116 @@
+COMPACTNESS THEOREMS
+--------------------
+
+Compact implies Sigma-compact
+@ -16 17
+
+Compact implies Countably compact
+@ -16 19
+
+Countably compact implies Weakly countably compact
+@ -19 21
+
+Sequentially compact implies Countably compact
+@ -20 19
+
+Countably compact implies Pseudocompact
+@ -19 22
+
+Compact implies Sigma-locally compact
+@ -16 25
+
+Compact implies Strongly locally compact
+@ -16 24
+
+Sigma-locally compact implies Sigma-compact
+@ -25 17
+
+Sigma-locally compact implies Locally compact
+@ -25 23
+
+Sigma-compact implies Lindelöf
+@ -17 18
+
+Second countable implies First countable
+@ -27 28
+
+Second countable implies Separable
+@ -27 26
+
+Second countable implies Lindelöf
+@ -27 18
+
+Separable implies Countable chain condition
+@ -26 29
+
+Second countable + Countably compact implies Compact
+@ -27 -19 16
+
+First countable + Countably Compact implies Sequentially compact
+@ -28 -19 20
+
+Compact + T2 implies T4
+@ -16 -3 7
+
+Compact implies Paracompact
+@ -16 30
+
+Paracompact implies Metacompact
+@ -30 31
+
+Paracompact implies Countably paracompact
+@ -30 32
+
+Countably compact implies Countably paracompact
+@ -19 32
+
+Countably paracompact implies Countably metacompact
+@ -32 33
+
+Metacompact implies Countably metacompact
+@ -31 33
+
+Fully normal is equivalent to Fully T4 and T1
+@ -34 35
+@ -34 2
+@ -2 -35 34
+
+Fully T4 implies T4
+@ -35 7
+
+Fully normal implies Paracompact
+@ -34 30
+
+T2 + Fully T4 == T2 + Paracompact
+@ -3 -35 30
+@ -3 -30 35
+
+T2 + Paracompact implies T4
+@ -3 -30 7
+
+T2 + Sigma locally compact implies T4
+@ -3 -25 7
+
+T2 + Locally compact implies T3.5
+@ -3 -23 6
+
+T2 + T4 implies T3.5
+@ -3 -7 6
+
+T2 + First countable + Countably Compact implies T3
+@ -3 -28 -19 5
+
+T3 + Second countable implies T5
+@ -5 -27 8
+
+T3 + Second countable implies Lindelöf
+@ -5 -27 18
+
+T3 + Lindelöf implies Paracompact
+@ -5 -18 30
+
+T3 + Paracompact implies Fully T4
+@ -5 -30 35
+
+T3 + Fully T4 implies Paracompact
+@ -5 -35 30

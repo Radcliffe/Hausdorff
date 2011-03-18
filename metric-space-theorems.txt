@@ -1,0 +1,50 @@
+Metric Spaces
+
+Metrizable implies First countable
+@ -53 28
+
+Metrizable implies Perfectly normal
+@ -53 15
+
+Metrizable implies T1
+@ -53 2
+
+Metrizable + Weak countably compact implies Sequentially compact
+@ -53 -21 20
+
+Metrizable + Weak countably compact implies Compact
+@ -53 -21 16
+
+Metrizable + Compact implies Sigma-locally compact
+@ -53 -16 25
+
+Metrizable + Sigma-locally compact implies Sigma compact
+@ -53 -25 17
+
+Metrizable + Sigma-compact implies Second countable
+@ -53 -17 27
+
+Metrizable + Separable implies Second countable
+@ -53 -26 27
+
+Metrizable + Lindelöf implies Second countable
+@ -53 -18 27
+
+Metrizable + Locally compact implies Strongly locally compact
+@ -53 -23 24
+
+Topologically complete implies Metrizable
+@ -55 53
+
+Metrizable + Compact implies Topologically complete
+@ -53 -16 55
+
+Regular + Second countable implies Metrizable
+@ -11 -27 53
+
+Metrizable iff Regular + Sigma-locally finite basis
+@ -53 54
+@ -54 -11 53
+
+Metrizable implies Paracompact
+@ -53 30

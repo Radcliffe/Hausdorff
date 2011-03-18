@@ -1,0 +1,61 @@
+1	T0
+2	T1
+3	T2
+4	T3
+5	T4
+6	T5
+7	T2.5
+8	T3.5
+9	Normal
+10	Urysohn
+11	Regular
+12	Compact
+13	Lindelöf
+14	Fully T4
+15	Discrete
+16	Card < c
+17	Card = c
+18	Separable
+19	Connected
+20	Scattered
+21	Countable
+22	Metrizable
+23	Semiregular
+24	Paracompact
+25	Metacompact
+26	Biconnected
+27	Card <= 2^c
+28	Fully normal
+29	Sigma-compact
+30	Pseudocompact
+31	Arc connected
+32	Path connected
+33	Hyperconnected
+34	Ultraconnected
+35	Locally compact
+36	First countable
+37	Second category
+38	Perfectly normal
+39	Second countable
+40	Zero-dimensional
+41	Completely normal
+42	Countably compact
+43	Locally connected
+44	Totally separated
+45	Completely regular
+46	Strongly connected
+47	Sequentially compact
+48	Has dispersion point
+49	Totally disconnected
+50	Sigma-locally compact
+51	Countably paracompact
+52	Countably metacompact
+53	Locally arc connected
+54	Locally path connected
+55	Topologically complete
+56	Extremally disconnected
+57	Weakly countably compact
+58	Strongly locally compact
+59	Countable chain condition
+60	Totally path disconnected
+61	Sigma-locally finite base
