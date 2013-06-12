@@ -1,0 +1,938 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Win32)">
+	<META NAME="AUTHOR" CONTENT="David Radcliffe">
+	<META NAME="CREATED" CONTENT="20070709;23031012">
+	<META NAME="CHANGEDBY" CONTENT="David Radcliffe">
+	<META NAME="CHANGED" CONTENT="20070711;12035240">
+	<STYLE>
+	<!--
+		@page { size: 9in 11in; margin: 0.79in }
+		TD P { margin-bottom: 0in; font-size: small}
+		H1 { margin-bottom: 0.08in }
+		H1.western { font-family: "Arial", sans-serif; font-size: 18pt }
+		H1.cjk { font-family: "MS Mincho"; font-size: 16pt }
+		H1.ctl { font-family: "Tahoma"; font-size: 16pt }
+		P { margin-bottom: 0.08in}
+		TH P { margin-bottom: 0in; font-style: italic }
+	-->
+	</STYLE>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script>
+var select = new Array();
+for (var i=1; i <= 61; i++)
+{
+    select[i] = 0;
+}
+
+$(document).ready(function(){
+  $(".propertyname").click(function(){
+    var id = $(this).attr("id");
+    var n = select[id];
+    switch (n)
+    {
+    case 0:
+       $(this).attr("style", "background-color:lightgreen");
+       break;
+    case 1:
+        $(this).attr("style", "background-color:lightpink");
+	break;
+    case 2:
+        $(this).attr("style", "background-color:white");
+    }
+    select[id] = (n + 1) % 3;
+    
+    $("div").show()
+    
+    for (var i=1; i <= 61; i++){
+      prop = "p" + i;
+      if (select[i] > 0){
+          $("div[p" + i + "!= " + (2 - select[i]) + "]").hide();
+      }
+    }
+  });
+});
+</script>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+
+<H1 CLASS="western">Topology Assistant</H1>
+
+<P> When you click on the name of a topological property, the cell background color will change colors. If the background is light green, then the page will display topological 
+spaces that have the given property. If the background is light pink, then the spaces that lack this property will be displayed.</p><br/>
+
+
+<TABLE WIDTH=768 BORDER=1 CELLPADDING=3 CELLSPACING=0>
+	<COL WIDTH=17>
+	<COL WIDTH=125>
+	<COL WIDTH=17>
+	<COL WIDTH=180>
+	<COL WIDTH=17>
+	<COL WIDTH=170>
+	<COL WIDTH=17>
+	<COL WIDTH=160>
+	<THEAD>
+		<TR VALIGN=TOP>
+			<TH WIDTH=17>
+				<P><BR>
+				</P>
+			</TH>
+			<TH WIDTH=125>
+				<P>Separation</P>
+			</TH>
+			<TH WIDTH=17>
+				<P><BR>
+				</P>
+			</TH>
+			<TH WIDTH=180>
+				<P>Compactness and Paracompactness</P>
+			</TH>
+			<TH WIDTH=17>
+				<P><BR>
+				</P>
+			</TH>
+			<TH WIDTH=170>
+				<P>Connectedness</P>
+			</TH>
+			<TH WIDTH=17>
+				<P><BR>
+				</P>
+			</TH>
+			<TH WIDTH=160>
+				<P>Metrizability and Cardinality</P>
+			</TH>
+		</TR>
+	</THEAD>
+	<TBODY>
+		<TR VALIGN=TOP>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/T0_space">1</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="1" WIDTH=125>
+				<P>T0</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Compact_space">16</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="16" WIDTH=180>
+				<P>Compact</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Connected_space">36</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="36" WIDTH=170>
+				<P>Connected </P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Metrizable">53</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="53" WIDTH=160>
+				<P>Metrizable</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/T1_space">2</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="2" WIDTH=125>
+				<P>T1</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Sigma-compact_space">17</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="17" WIDTH=180>
+				<P>Sigma-Compact</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Connected_space">37</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="37" WIDTH=170>
+				<P>Path Connected</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Metrizable">54</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="54" WIDTH=160>
+				<P>Sigma-locally Finite Base</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Hausdorff_space">3</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="3" WIDTH=125>
+				<P>Hausdorff 
+				</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Lindel&ouml;f_space">18</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="18" WIDTH=180>
+				<P>Lindel<FONT FACE="Times New Roman, serif">&ouml;f</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Connected_space">38</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="38" WIDTH=170>
+				<P>Arc Connected</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Topologically_complete">55</A></P>
+			</TD>
+			<TD  CLASS="propertyname" ID="55" WIDTH=160>
+				<P>Topologically Complete</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Completely_Hausdorff_space">4</A></P>
+			</TD>
+			<TD  CLASS="propertyname" ID="4" WIDTH=125>
+				<P>Urysohn</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Countably_compact">19</A></P>
+			</TD>
+			<TD  CLASS="propertyname" ID="19" WIDTH=180>
+				<P>Countably Compact</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Hyperconnected_space">39</A></P>
+			</TD>
+			<TD  CLASS="propertyname" ID="39" WIDTH=170>
+				<P>Hyperconnected</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Baire_space">56</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="56" WIDTH=160>
+				<P>Second Category</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Regular_Hausdorff_space">5</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="5" WIDTH=125>
+				<P>Regular</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Sequentially_compact">20</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="20" WIDTH=180>
+				<P>Sequentially Compact</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Ultraconnected_space">40</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="40" WIDTH=170>
+				<P>Ultraconnected</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Countable_set">57</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="57" WIDTH=160>
+				<P>Countable</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Tychonoff_space">6</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="6" WIDTH=125>
+				<P>Completely Regular</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Limit_point_compact">21</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="21" WIDTH=180>
+				<P>Limit Point  Compact</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Connected_space">41</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="41" WIDTH=170>
+				<P>Locally Connected</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Cardinality_of_the_continuum">58</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="58" WIDTH=160>
+				<P>Cardinality &lt; c</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Normal_Hausdorff_space">7</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="7" WIDTH=125>
+				<P>Normal</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Pseudocompact_space">22</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="22" WIDTH=180>
+				<P>Pseudocompact 
+				</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Connected_space">42</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="42" WIDTH=170>
+				<P>Locally Path Connected</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Cardinality_of_the_continuum">59</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="59" WIDTH=160>
+				<P>Cardinality = c</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Normal_space">8</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="8" WIDTH=125>
+				<P>Completely Normal</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Locally_compact_space">23</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="23" WIDTH=180>
+				<P>Locally Compact</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Connected_space">43</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="43" WIDTH=170>
+				<P>Locally Arc Connected</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Beth_number#Beth_two">60</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="60" WIDTH=160>
+				<P>Cardinality &lt;= 2^c</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Completely_Hausdorff_space">9</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="9" WIDTH=125>
+				<P>Completely Hausdorff</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Locally_compact_space">24</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="24" WIDTH=180>
+				<P>Strongly Locally Compact 
+				</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://eom.springer.de/b/b016090.htm">44</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="44" WIDTH=170>
+				<P>Biconnected</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=160>
+				<P><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Semiregular_space">10</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="10" WIDTH=125>
+				<P>Semiregular</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Sigma-locally_compact">25</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="25" WIDTH=180>
+				<P>Sigma-locally compact 
+				</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Dispersion_point">45</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="45" WIDTH=170>
+				<P>Has Dispersion Point</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=160>
+				<P><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Regular_space">11</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="11" WIDTH=125>
+				<P>T3</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Separable_space">26</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="26" WIDTH=180>
+				<P>Separable 
+				</P>
+			</TD>
+			<TD WIDTH=17>
+				<P ALIGN=LEFT><A HREF="http://en.wikipedia.org/wiki/Connected_space">46</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="46" WIDTH=170>
+				<P>Totally Path Disconnected</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=160>
+				<P><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Tychonoff_space">12</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="12" WIDTH=125>
+				<P>Tychonoff</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Second-countable_space">27</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="27" WIDTH=180>
+				<P>Second Countable 
+				</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Connected_space">47</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="47" WIDTH=170>
+				<P>Totally Disconnected</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=160>
+				<P><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Normal_space">13</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="13" WIDTH=125>
+				<P>T4</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/First-countable_space">28</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="28" WIDTH=180>
+				<P>First Countable 
+				</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Connected_space">48</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="48" WIDTH=170>
+				<P>Totally Separated</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=160>
+				<P><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Normal_space">14</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="14" WIDTH=125>
+				<P>T5</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Countable_chain_condition">29</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="29" WIDTH=180>
+				<P>Countable Chain Condition 
+				</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Extremally_disconnected_space">49</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="49" WIDTH=170>
+				<P>Extremally Disconnected</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=160>
+				<P><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Normal_space">15</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="15" WIDTH=125>
+				<P>Perfectly T4</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Paracompact_space">30</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="30" WIDTH=180>
+				<P>Paracompact 
+				</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Zero-dimensional_space">50</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="50" WIDTH=170>
+				<P>Zero Dimensional</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=160>
+				<P><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=17>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=125>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Paracompact">31</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="31" WIDTH=180>
+				<P>Metacompact 
+				</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://planetmath.org/encyclopedia/ScatteredSet.html">51</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="51" WIDTH=170>
+				<P>Scattered</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=160>
+				<P><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=17>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=125>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Paracompact">32</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="32" WIDTH=180>
+				<P>Countably Paracompact 
+				</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Discrete_space">52</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="52" WIDTH=170>
+				<P>Discrete</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=160>
+				<P><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=17>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=125>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Paracompact">33</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="33" WIDTH=180>
+				<P>Countably Metacompact 
+				</P>
+			</TD>
+			<TD WIDTH=17>
+				<P>61</P>
+			</TD>
+			<TD CLASS="propertyname" ID="61" WIDTH=170>
+				<P>Strongly Connected 
+				</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=160>
+				<P><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=17>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=125>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Paracompact_space">34</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="34" WIDTH=180>
+				<P>Fully T4</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=170>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=160>
+				<P><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=17>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=125>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><A HREF="http://en.wikipedia.org/wiki/Paracompact_space">35</A></P>
+			</TD>
+			<TD CLASS="propertyname" ID="35" WIDTH=180>
+				<P>Fully Normal</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=170>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=160>
+				<P><BR>
+				</P>
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+
+<h3> Results </h3>
+<div id="1" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="1" p42="1" p43="1" p44="0" p45="0" p46="1" p47="1" p48="1" p49="1" p50="1" p51="1" p52="1" p53="1" p54="1" p55="1" p56="1" p57="1" p58="1" p59="0" p60="1"><a href="http://en.wikipedia.org/wiki/Discrete_topology">Finite Discrete Topology</a><br/></div>
+
+<div id="2" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="0" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="1" p42="1" p43="1" p44="0" p45="0" p46="1" p47="1" p48="1" p49="1" p50="1" p51="1" p52="1" p53="1" p54="1" p55="1" p56="1" p57="1" p58="1" p59="0" p60="1"><a href="http://en.wikipedia.org/wiki/Discrete_topology">Countable Discrete Topology</a><br/></div>
+
+<div id="3" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="0" p18="0" p19="0" p20="0" p21="0" p22="0" p23="1" p24="1" p25="0" p26="0" p27="0" p28="1" p29="0" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="1" p42="1" p43="1" p44="0" p45="0" p46="1" p47="1" p48="1" p49="1" p50="1" p51="1" p52="1" p53="1" p54="1" p55="1" p56="1" p57="0" p58="3" p59="3" p60="3"><a href="http://en.wikipedia.org/wiki/Discrete_topology">Uncountable Discrete Topology</a><br/></div>
+
+<div id="4" p1="0" p2="0" p3="0" p4="0" p5="1" p6="1" p7="1" p8="1" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="0" p35="1" p36="1" p37="1" p38="3" p39="1" p40="1" p41="1" p42="1" p43="3" p44="3" p45="3" p46="0" p47="0" p48="0" p49="0" p50="1" p51="0" p52="0" p53="0" p54="1" p55="0" p56="1" p57="3" p58="3" p59="3" p60="3"><a href="http://en.wikipedia.org/wiki/Indiscrete_topology">Indiscrete Topology</a><br/></div>
+
+<div id="6" p1="0" p2="0" p3="0" p4="0" p5="1" p6="1" p7="1" p8="1" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="1" p18="1" p19="0" p20="0" p21="1" p22="0" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="0" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="1" p42="1" p43="0" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="1" p51="0" p52="0" p53="0" p54="1" p55="0" p56="1" p57="1" p58="1" p59="0" p60="1"><a href="http://en.wikipedia.org/wiki/Odd-even_topology">Odd-Even Topology</a><br/></div>
+
+<div id="8" p1="1" p2="0" p3="0" p4="0" p5="0" p6="0" p7="0" p8="0" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="0" p35="0" p36="1" p37="1" p38="0" p39="1" p40="0" p41="1" p42="1" p43="0" p44="1" p45="1" p46="0" p47="0" p48="0" p49="0" p50="0" p51="1" p52="0" p53="0" p54="1" p55="0" p56="1" p57="1" p58="1" p59="0" p60="1"><a href="http://en.wikipedia.org/wiki/Particular_point_topology">Finite Particular Point Topology</a><br/></div>
+
+<div id="9" p1="1" p2="0" p3="0" p4="0" p5="0" p6="0" p7="0" p8="0" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="1" p23="1" p24="0" p25="1" p26="1" p27="1" p28="1" p29="1" p30="0" p31="0" p32="0" p33="0" p34="0" p35="0" p36="1" p37="1" p38="0" p39="1" p40="0" p41="1" p42="1" p43="0" p44="1" p45="1" p46="0" p47="0" p48="0" p49="0" p50="0" p51="1" p52="0" p53="0" p54="1" p55="0" p56="1" p57="1" p58="1" p59="0" p60="1"><a href="http://en.wikipedia.org/wiki/Particular_point_topology">Countable Particular Point Topology</a><br/></div>
+
+<div id="10" p1="1" p2="0" p3="0" p4="0" p5="0" p6="0" p7="0" p8="0" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="0" p18="0" p19="0" p20="0" p21="0" p22="1" p23="1" p24="0" p25="0" p26="1" p27="0" p28="1" p29="1" p30="0" p31="0" p32="0" p33="0" p34="0" p35="0" p36="1" p37="1" p38="0" p39="1" p40="0" p41="1" p42="1" p43="0" p44="1" p45="1" p46="0" p47="0" p48="0" p49="0" p50="0" p51="1" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="3" p59="3" p60="3"><a href="http://en.wikipedia.org/wiki/Particular_point_topology">Uncountable Particular Point Topology</a><br/></div>
+
+<div id="11" p1="1" p2="0" p3="0" p4="0" p5="0" p6="0" p7="1" p8="1" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="0" p35="0" p36="1" p37="1" p38="0" p39="1" p40="1" p41="1" p42="1" p43="0" p44="1" p45="1" p46="0" p47="0" p48="0" p49="0" p50="0" p51="1" p52="0" p53="0" p54="1" p55="0" p56="1" p57="1" p58="1" p59="0" p60="1"><a href="http://en.wikipedia.org/wiki/Sierpinski_space">Sierpinski Space</a><br/></div>
+
+<div id="13" p1="1" p2="0" p3="0" p4="0" p5="0" p6="0" p7="1" p8="1" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="0" p35="1" p36="1" p37="1" p38="0" p39="1" p40="1" p41="1" p42="1" p43="0" p44="1" p45="1" p46="0" p47="0" p48="0" p49="0" p50="0" p51="1" p52="0" p53="0" p54="1" p55="0" p56="1" p57="1" p58="1" p59="0" p60="1"><a href="http://en.wikipedia.org/wiki/Excluded_point_topology">Finite Excluded Point Topology</a><br/></div>
+
+<div id="14" p1="1" p2="0" p3="0" p4="0" p5="0" p6="0" p7="1" p8="1" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="0" p35="1" p36="1" p37="1" p38="0" p39="1" p40="1" p41="1" p42="1" p43="0" p44="1" p45="1" p46="0" p47="0" p48="0" p49="0" p50="0" p51="1" p52="0" p53="0" p54="1" p55="0" p56="1" p57="1" p58="1" p59="0" p60="1"><a href="http://en.wikipedia.org/wiki/Excluded_point_topology">Countable Excluded Point Topology</a><br/></div>
+
+<div id="15" p1="1" p2="0" p3="0" p4="0" p5="0" p6="0" p7="1" p8="1" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="0" p27="0" p28="1" p29="0" p30="1" p31="1" p32="1" p33="1" p34="0" p35="1" p36="1" p37="1" p38="0" p39="1" p40="1" p41="1" p42="1" p43="0" p44="1" p45="1" p46="0" p47="0" p48="0" p49="0" p50="0" p51="1" p52="0" p53="0" p54="1" p55="0" p56="1" p57="0" p58="3" p59="3" p60="3"><a href="http://en.wikipedia.org/wiki/Excluded_point_topology">Uncountable Excluded Point Topology</a><br/></div>
+
+<div id="17" p1="1" p2="0" p3="0" p4="0" p5="0" p6="0" p7="1" p8="1" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="0" p27="0" p28="1" p29="0" p30="1" p31="1" p32="1" p33="1" p34="0" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="1" p42="1" p43="0" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="1" p52="0" p53="0" p54="1" p55="0" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Either-or_topology">Either-Or Topology</a><br/></div>
+
+<div id="18" p1="1" p2="1" p3="0" p4="0" p5="0" p6="0" p7="0" p8="0" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="0" p35="0" p36="1" p37="0" p38="0" p39="1" p40="0" p41="1" p42="0" p43="0" p44="0" p45="0" p46="1" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="1" p55="0" p56="0" p57="1" p58="1" p59="0" p60="1"><a href="http://en.wikipedia.org/wiki/Finite_complement_topology">Finite Complement Topology on a Countable Space</a><br/></div>
+
+<div id="19" p1="1" p2="1" p3="0" p4="0" p5="0" p6="0" p7="0" p8="0" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="1" p27="0" p28="0" p29="1" p30="1" p31="1" p32="1" p33="1" p34="0" p35="0" p36="1" p37="1" p38="1" p39="1" p40="0" p41="1" p42="1" p43="1" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="3" p59="3" p60="3"><a href="http://en.wikipedia.org/wiki/Finite_complement_topology">Finite Complement Topology on an Uncountable Space</a><br/></div>
+
+<div id="20" p1="1" p2="1" p3="0" p4="0" p5="0" p6="0" p7="0" p8="0" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="0" p18="1" p19="0" p20="0" p21="0" p22="1" p23="0" p24="0" p25="0" p26="0" p27="0" p28="0" p29="1" p30="0" p31="0" p32="0" p33="0" p34="0" p35="0" p36="1" p37="0" p38="0" p39="1" p40="0" p41="1" p42="0" p43="0" p44="0" p45="0" p46="1" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="3" p59="3" p60="3"><a href="http://en.wikipedia.org/wiki/Countable_complement_topology">Countable Complement Topology</a><br/></div>
+
+<div id="21" p1="0" p2="0" p3="0" p4="0" p5="0" p6="0" p7="0" p8="0" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="0" p18="1" p19="0" p20="0" p21="1" p22="1" p23="0" p24="0" p25="0" p26="0" p27="0" p28="0" p29="1" p30="0" p31="0" p32="0" p33="0" p34="0" p35="0" p36="1" p37="0" p38="0" p39="0" p40="0" p41="1" p42="0" p43="0" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="3" p59="3" p60="3"><a href="http://en.wikipedia.org/wiki/Countable_complement_topology">Double Pointed Countable Complement Topology</a><br/></div>
+
+<div id="22" p1="1" p2="1" p3="0" p4="0" p5="0" p6="0" p7="0" p8="0" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="0" p35="0" p36="1" p37="1" p38="1" p39="1" p40="0" p41="1" p42="1" p43="1" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="1" p55="0" p56="0" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Compact_complement_topology">Compact Complement Topology</a><br/></div>
+
+<div id="23" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="1" p51="1" p52="0" p53="1" p54="1" p55="1" p56="1" p57="1" p58="1" p59="0" p60="1"><a href="http://en.wikipedia.org/wiki/Fort_space">Countable Fort Space</a><br/></div>
+
+<div id="24" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="0" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="0" p27="0" p28="0" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="1" p51="1" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="3" p59="3" p60="3"><a href="http://en.wikipedia.org/wiki/Fort_space">Uncountable Fort Space</a><br/></div>
+
+<div id="25" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="0" p16="0" p17="0" p18="1" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="0" p27="0" p28="0" p29="0" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="1" p51="1" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="3" p59="3" p60="3"><a href="http://en.wikipedia.org/wiki/Fortissimo_space">Fortissimo Space</a><br/></div>
+
+<div id="26" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="0" p28="0" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="1" p51="1" p52="0" p53="0" p54="0" p55="0" p56="1" p57="1" p58="1" p59="0" p60="1"><a href="http://en.wikipedia.org/wiki/Arens-Fort_space">Arens-Fort Space</a><br/></div>
+
+<div id="27" p1="1" p2="1" p3="0" p4="0" p5="0" p6="0" p7="0" p8="0" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="0" p27="0" p28="0" p29="0" p30="1" p31="1" p32="1" p33="1" p34="0" p35="0" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="0" p49="0" p50="0" p51="1" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="3" p59="3" p60="3"><a href="http://en.wikipedia.org/wiki/Fort_space">Modified Fort Space</a><br/></div>
+
+<div id="28" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="0" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="1" p37="1" p38="1" p39="0" p40="0" p41="1" p42="1" p43="1" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="1" p54="1" p55="1" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Euclidean_space">Euclidean Topology</a><br/></div>
+
+<div id="29" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="1" p51="0" p52="0" p53="1" p54="1" p55="1" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Cantor_set">The Cantor Set</a><br/></div>
+
+<div id="30" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="1" p51="0" p52="0" p53="1" p54="1" p55="0" p56="0" p57="1" p58="1" p59="0" p60="1"><a href="http://en.wikipedia.org/wiki/Rational_number">The Rational Numbers</a><br/></div>
+
+<div id="31" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="0" p18="1" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="1" p51="0" p52="0" p53="1" p54="1" p55="1" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Irrational_number">The Irrational Numbers</a><br/></div>
+
+<div id="35" p1="1" p2="1" p3="0" p4="0" p5="0" p6="0" p7="0" p8="0" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="1" p27="0" p28="0" p29="1" p30="1" p31="1" p32="1" p33="1" p34="0" p35="0" p36="1" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="1" p45="1" p46="1" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="1" p55="0" p56="0" p57="1" p58="1" p59="0" p60="1"><a href="http://topology.jdabbs.com/spaces/29">One Point Compactification of the Rationals</a><br/></div>
+
+<div id="36" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="0" p18="1" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="1" p37="1" p38="1" p39="0" p40="0" p41="1" p42="1" p43="1" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="1" p54="1" p55="1" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Hilbert_space">Hilbert Space</a><br/></div>
+
+<div id="38" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="1" p37="1" p38="1" p39="0" p40="0" p41="1" p42="1" p43="1" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="1" p54="1" p55="1" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Hilbert_cube">Hilbert Cube</a><br/></div>
+
+<div id="40" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="0" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="1" p51="1" p52="0" p53="1" p54="1" p55="1" p56="1" p57="1" p58="1" p59="0" p60="1"><a href="http://en.wikipedia.org/wiki/Order_topology">Open ordinal space [0,Γ) where Γ<Ω</a><br/></div>
+
+<div id="41" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="1" p51="1" p52="0" p53="1" p54="1" p55="1" p56="1" p57="1" p58="1" p59="0" p60="1"><a href="http://en.wikipedia.org/wiki/Order_topology">Closed ordinal space [0,Γ] where Γ<Ω</a><br/></div>
+
+<div id="42" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="0" p16="0" p17="0" p18="0" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="0" p26="0" p27="0" p28="1" p29="0" p30="0" p31="0" p32="1" p33="1" p34="0" p35="0" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="1" p51="1" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="3" p59="3" p60="1"><a href="http://en.wikipedia.org/wiki/Order_topology">Open ordinal space [0,Ω)</a><br/></div>
+
+<div id="43" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="0" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="0" p27="0" p28="0" p29="0" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="1" p51="1" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="3" p59="3" p60="1"><a href="http://en.wikipedia.org/wiki/Order_topology">Closed ordinal space [0,Ω]</a><br/></div>
+
+<div id="45" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="0" p16="0" p17="0" p18="0" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="0" p26="0" p27="0" p28="1" p29="0" p30="0" p31="0" p32="1" p33="1" p34="0" p35="0" p36="1" p37="1" p38="1" p39="0" p40="0" p41="1" p42="1" p43="1" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Long_line_%28topology%29">The Long Line</a><br/></div>
+
+<div id="46" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="0" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="0" p27="0" p28="0" p29="0" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="1" p37="0" p38="0" p39="0" p40="0" p41="1" p42="0" p43="0" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Long_line_%28topology%29">The Extended Long Line</a><br/></div>
+
+<div id="47" p1="1" p2="1" p3="1" p4="1" p5="0" p6="0" p7="0" p8="0" p9="1" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="0" p18="0" p19="1" p20="1" p21="1" p22="1" p23="0" p24="0" p25="0" p26="0" p27="0" p28="0" p29="0" p30="0" p31="0" p32="1" p33="1" p34="0" p35="0" p36="1" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Long_line_%28topology%29">An Altered Long Line</a><br/></div>
+
+<div id="48" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="0" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="0" p27="0" p28="1" p29="0" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="1" p37="0" p38="0" p39="0" p40="0" p41="1" p42="0" p43="0" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Lexicographic_order_topology_on_the_unit_square">Lexicographic Ordering on the Unit Square</a><br/></div>
+
+<div id="50" p1="1" p2="0" p3="0" p4="0" p5="0" p6="0" p7="1" p8="1" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="1" p18="1" p19="0" p20="0" p21="1" p22="1" p23="1" p24="0" p25="1" p26="1" p27="1" p28="1" p29="1" p30="0" p31="0" p32="0" p33="0" p34="0" p35="0" p36="1" p37="1" p38="1" p39="1" p40="1" p41="1" p42="1" p43="1" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="1" p55="0" p56="0" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Order_topology">Right Order Topology on R</a><br/></div>
+
+<div id="51" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="0" p18="1" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="0" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="1" p51="0" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Lower_limit_topology">Right Half-Open Interval Topology</a><br/></div>
+
+<div id="52" p1="0" p2="0" p3="0" p4="0" p5="0" p6="0" p7="1" p8="1" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="1" p18="1" p19="0" p20="0" p21="1" p22="1" p23="1" p24="0" p25="1" p26="1" p27="1" p28="1" p29="1" p30="0" p31="0" p32="0" p33="0" p34="0" p35="0" p36="1" p37="1" p38="1" p39="1" p40="1" p41="1" p42="1" p43="1" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="1" p55="0" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Nested_interval_topology">Nested Interval Topology</a><br/></div>
+
+<div id="53" p1="1" p2="0" p3="0" p4="0" p5="0" p6="0" p7="0" p8="0" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="0" p35="0" p36="1" p37="1" p38="1" p39="1" p40="0" p41="1" p42="1" p43="1" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="1" p55="0" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Overlapping_interval_topology">Overlapping Interval Topology</a><br/></div>
+
+<div id="54" p1="0" p2="0" p3="0" p4="0" p5="0" p6="0" p7="0" p8="0" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="1" p18="1" p19="0" p20="0" p21="1" p22="1" p23="1" p24="0" p25="1" p26="1" p27="1" p28="1" p29="1" p30="0" p31="1" p32="0" p33="1" p34="0" p35="0" p36="1" p37="2" p38="2" p39="1" p40="0" p41="1" p42="2" p43="2" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="1" p55="0" p56="0" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Interlocking_interval_topology">Interlocking Interval Topology</a><br/></div>
+
+<div id="55" p1="1" p2="0" p3="0" p4="0" p5="0" p6="0" p7="1" p8="1" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="0" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="0" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="1" p42="1" p43="0" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="1" p52="0" p53="0" p54="1" p55="0" p56="1" p57="1" p58="1" p59="0" p60="1"><a href="http://en.wikipedia.org/wiki/Hjalmar_Ekdal_topology">Hjalmar Ekdal Topology</a><br/></div>
+
+<div id="56" p1="1" p2="0" p3="0" p4="0" p5="0" p6="0" p7="0" p8="0" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="0" p35="0" p36="1" p37="1" p38="0" p39="1" p40="0" p41="1" p42="1" p43="0" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="1" p55="0" p56="1" p57="1" p58="1" p59="0" p60="1"><a href="http://en.wikipedia.org/wiki/Prime_ideal_topology#Zariski_topology">Prime Ideal Topology</a><br/></div>
+
+<div id="57" p1="1" p2="0" p3="0" p4="0" p5="0" p6="0" p7="1" p8="0" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="1" p18="1" p19="0" p20="0" p21="1" p22="1" p23="1" p24="0" p25="1" p26="1" p27="1" p28="1" p29="1" p30="0" p31="0" p32="0" p33="0" p34="0" p35="0" p36="1" p37="1" p38="0" p39="0" p40="1" p41="1" p42="1" p43="0" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="1" p52="0" p53="0" p54="1" p55="0" p56="1" p57="1" p58="1" p59="0" p60="1"><a href="http://en.wikipedia.org/wiki/Divisor_topology">Divisor Topology</a><br/></div>
+
+<div id="58" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="1" p51="0" p52="0" p53="1" p54="1" p55="0" p56="0" p57="1" p58="1" p59="0" p60="1"><a href="http://en.wikipedia.org/wiki/Evenly_spaced_integer_topology">Evenly Spaced Integer Topology</a><br/></div>
+
+<div id="59" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="1" p51="0" p52="0" p53="1" p54="1" p55="0" p56="0" p57="1" p58="1" p59="0" p60="1"><a href="http://en.wikipedia.org/wiki/P-adic#Analytic_approach">The p-adic Topology on Z</a><br/></div>
+
+<div id="60" p1="1" p2="1" p3="1" p4="0" p5="0" p6="0" p7="0" p8="0" p9="0" p10="1" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="1" p23="0" p24="0" p25="0" p26="1" p27="1" p28="1" p29="1" p30="0" p31="1" p32="0" p33="1" p34="0" p35="0" p36="1" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="1" p55="0" p56="2" p57="1" p58="1" p59="0" p60="1"><a href="http://en.wikipedia.org/wiki/Prime_integer_topology">Relatively Prime Integer Topology</a><br/></div>
+
+<div id="61" p1="1" p2="1" p3="1" p4="0" p5="0" p6="0" p7="0" p8="0" p9="0" p10="2" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="1" p23="0" p24="0" p25="0" p26="1" p27="1" p28="1" p29="1" p30="0" p31="1" p32="0" p33="1" p34="0" p35="0" p36="1" p37="0" p38="0" p39="0" p40="0" p41="1" p42="0" p43="0" p44="0" p45="0" p46="1" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="1" p55="0" p56="2" p57="1" p58="1" p59="0" p60="1"><a href="http://en.wikipedia.org/wiki/Prime_integer_topology">Prime Integer Topology</a><br/></div>
+
+<div id="62" p1="0" p2="0" p3="0" p4="0" p5="1" p6="1" p7="1" p8="1" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="1" p18="1" p19="0" p20="0" p21="1" p22="0" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="0" p35="1" p36="1" p37="1" p38="1" p39="0" p40="0" p41="1" p42="1" p43="1" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="1" p55="0" p56="0" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/54">Double Pointed Reals</a><br/></div>
+
+<div id="63" p1="1" p2="1" p3="1" p4="1" p5="0" p6="0" p7="0" p8="0" p9="1" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="0" p18="1" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="0" p27="0" p28="0" p29="1" p30="0" p31="0" p32="0" p33="0" p34="0" p35="0" p36="1" p37="0" p38="0" p39="0" p40="0" p41="1" p42="0" p43="0" p44="0" p45="0" p46="1" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="2" p55="0" p56="2" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/55">Countable Complement Extension Topology</a><br/></div>
+
+<div id="64" p1="1" p2="1" p3="1" p4="1" p5="0" p6="0" p7="0" p8="0" p9="1" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="1" p28="1" p29="1" p30="0" p31="1" p32="0" p33="1" p34="0" p35="0" p36="1" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="1" p55="0" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/K-topology">Smirnov's Deleted Sequence Topology</a><br/></div>
+
+<div id="65" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="0" p8="0" p9="1" p10="1" p11="1" p12="1" p13="0" p14="0" p15="0" p16="0" p17="0" p18="0" p19="0" p20="0" p21="0" p22="0" p23="1" p24="1" p25="0" p26="1" p27="0" p28="1" p29="1" p30="0" p31="0" p32="2" p33="1" p34="0" p35="0" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="1" p51="1" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Rational_sequence_topology">Rational Sequence Topology</a><br/></div>
+
+<div id="66" p1="1" p2="1" p3="1" p4="1" p5="0" p6="0" p7="0" p8="0" p9="1" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="0" p18="1" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="1" p28="1" p29="1" p30="0" p31="1" p32="0" p33="1" p34="0" p35="0" p36="1" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="1" p55="0" p56="2" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/58">Indiscrete Rational Extension of R</a><br/></div>
+
+<div id="67" p1="1" p2="1" p3="1" p4="1" p5="0" p6="0" p7="0" p8="0" p9="1" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="0" p18="1" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="1" p28="1" p29="1" p30="0" p31="1" p32="0" p33="1" p34="0" p35="0" p36="1" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="1" p55="0" p56="2" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/59">Indiscrete Irrational Extension of R</a><br/></div>
+
+<div id="68" p1="1" p2="1" p3="1" p4="1" p5="0" p6="0" p7="0" p8="0" p9="1" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="0" p18="0" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="0" p28="1" p29="1" p30="0" p31="0" p32="0" p33="0" p34="0" p35="0" p36="1" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="2" p55="0" p56="2" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/60">Pointed Rational Extension of R</a><br/></div>
+
+<div id="69" p1="1" p2="1" p3="1" p4="1" p5="0" p6="0" p7="0" p8="0" p9="1" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="0" p18="1" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="1" p28="1" p29="1" p30="0" p31="0" p32="0" p33="0" p34="0" p35="0" p36="1" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="1" p55="0" p56="2" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/61">Pointed Irrational Extension of R</a><br/></div>
+
+<div id="70" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="0" p18="1" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="1" p51="0" p52="0" p53="1" p54="1" p55="2" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/62">Discrete Rational Extension of R</a><br/></div>
+
+<div id="71" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="0" p16="0" p17="0" p18="0" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="0" p27="0" p28="1" p29="0" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="1" p51="0" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/63">Discrete Irrational Extension of R</a><br/></div>
+
+<div id="72" p1="1" p2="1" p3="1" p4="1" p5="0" p6="0" p7="0" p8="0" p9="1" p10="2" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="0" p18="0" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="0" p28="1" p29="1" p30="0" p31="0" p32="0" p33="1" p34="0" p35="0" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="0" p49="0" p50="0" p51="1" p52="0" p53="0" p54="2" p55="0" p56="2" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/64">Rational Extension in the Plane</a><br/></div>
+
+<div id="73" p1="1" p2="1" p3="0" p4="0" p5="0" p6="0" p7="0" p8="0" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="0" p35="0" p36="1" p37="1" p38="1" p39="0" p40="0" p41="1" p42="1" p43="1" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="1" p55="0" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/65">Telophase Topology</a><br/></div>
+
+<div id="74" p1="1" p2="1" p3="1" p4="0" p5="0" p6="0" p7="0" p8="0" p9="0" p10="1" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="1" p28="1" p29="1" p30="0" p31="1" p32="0" p33="1" p34="0" p35="0" p36="1" p37="1" p38="1" p39="0" p40="0" p41="1" p42="1" p43="1" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="1" p55="0" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Double_origin_topology">Double Origin Topology</a><br/></div>
+
+<div id="75" p1="1" p2="1" p3="1" p4="0" p5="0" p6="0" p7="0" p8="0" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="1" p23="0" p24="0" p25="0" p26="1" p27="1" p28="1" p29="1" p30="0" p31="1" p32="0" p33="1" p34="0" p35="0" p36="1" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="1" p55="0" p56="0" p57="1" p58="1" p59="0" p60="1"><a href="http://topology.jdabbs.com/spaces/67">Irrational Slope Topology</a><br/></div>
+
+<div id="76" p1="1" p2="1" p3="1" p4="1" p5="0" p6="0" p7="0" p8="0" p9="1" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="0" p18="0" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="0" p28="1" p29="1" p30="0" p31="0" p32="0" p33="1" p34="0" p35="0" p36="1" p37="1" p38="1" p39="0" p40="0" p41="1" p42="1" p43="1" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="2" p55="0" p56="2" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/68">Deleted Diameter Topology</a><br/></div>
+
+<div id="77" p1="1" p2="1" p3="1" p4="1" p5="0" p6="0" p7="0" p8="0" p9="1" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="0" p18="1" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="0" p28="1" p29="1" p30="0" p31="2" p32="0" p33="2" p34="0" p35="0" p36="1" p37="1" p38="1" p39="0" p40="0" p41="1" p42="1" p43="1" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="2" p55="0" p56="2" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/69">Deleted Radius Topology</a><br/></div>
+
+<div id="78" p1="1" p2="1" p3="1" p4="1" p5="0" p6="0" p7="0" p8="0" p9="1" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="0" p18="0" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="0" p28="1" p29="1" p30="0" p31="0" p32="0" p33="1" p34="0" p35="0" p36="1" p37="1" p38="1" p39="0" p40="0" p41="1" p42="1" p43="1" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="2" p55="0" p56="2" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Half-disk_topology">Half-Disc Topology</a><br/></div>
+
+<div id="79" p1="1" p2="1" p3="1" p4="1" p5="0" p6="0" p7="0" p8="0" p9="1" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="1" p28="1" p29="1" p30="0" p31="1" p32="0" p33="1" p34="0" p35="0" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="0" p51="1" p52="0" p53="0" p54="1" p55="0" p56="1" p57="1" p58="1" p59="0" p60="1"><a href="http://topology.jdabbs.com/spaces/71">Irregular Lattice Topology</a><br/></div>
+
+<div id="80" p1="1" p2="1" p3="1" p4="1" p5="0" p6="0" p7="0" p8="0" p9="0" p10="1" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="1" p28="1" p29="1" p30="0" p31="1" p32="0" p33="1" p34="0" p35="0" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="1" p55="0" p56="0" p57="1" p58="1" p59="0" p60="1"><a href="http://topology.jdabbs.com/spaces/72">Arens Square</a><br/></div>
+
+<div id="81" p1="1" p2="1" p3="1" p4="0" p5="0" p6="0" p7="0" p8="0" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="1" p28="1" p29="1" p30="0" p31="1" p32="0" p33="1" p34="0" p35="0" p36="1" p37="1" p38="1" p39="0" p40="0" p41="1" p42="1" p43="1" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="1" p55="0" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/73">Simplified Arens Square</a><br/></div>
+
+<div id="82" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="0" p8="0" p9="1" p10="1" p11="1" p12="1" p13="0" p14="0" p15="0" p16="0" p17="0" p18="0" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="0" p28="1" p29="1" p30="0" p31="0" p32="0" p33="1" p34="0" p35="0" p36="1" p37="1" p38="1" p39="0" p40="0" p41="1" p42="1" p43="1" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Moore_plane">Niemytzki's Tangent Disk Topology</a><br/></div>
+
+<div id="83" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="2" p18="1" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="1" p37="1" p38="1" p39="0" p40="0" p41="1" p42="1" p43="1" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="1" p54="1" p55="2" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/75">Metrizable Tangent Disk Topology</a><br/></div>
+
+<div id="84" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="0" p8="0" p9="1" p10="1" p11="1" p12="1" p13="0" p14="0" p15="0" p16="0" p17="0" p18="0" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="0" p28="1" p29="1" p30="0" p31="0" p32="0" p33="1" p34="0" p35="0" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="1" p51="0" p52="0" p53="0" p54="0" p55="0" p56="2" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Sorgenfrey_plane">Sorgenfrey's Half-Open Square Topology</a><br/></div>
+
+<div id="85" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="0" p8="0" p9="1" p10="1" p11="1" p12="1" p13="0" p14="0" p15="0" p16="0" p17="0" p18="0" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="0" p27="0" p28="1" p29="0" p30="0" p31="1" p32="2" p33="1" p34="0" p35="0" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="1" p51="0" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/77">Michael's Product Topology</a><br/></div>
+
+<div id="86" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="0" p9="1" p10="1" p11="1" p12="1" p13="1" p14="0" p15="0" p16="1" p17="1" p18="1" p19="1" p20="2" p21="1" p22="1" p23="1" p24="1" p25="1" p26="0" p27="0" p28="0" p29="0" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="1" p51="1" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="3" p59="3" p60="1"><a href="http://en.wikipedia.org/wiki/Tychonoff_plank">Tychonoff Plank</a><br/></div>
+
+<div id="87" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="0" p8="0" p9="1" p10="1" p11="1" p12="1" p13="0" p14="0" p15="0" p16="0" p17="0" p18="0" p19="0" p20="0" p21="0" p22="1" p23="1" p24="1" p25="0" p26="0" p27="0" p28="0" p29="0" p30="0" p31="0" p32="0" p33="1" p34="0" p35="0" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="1" p51="1" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="3" p59="3" p60="1"><a href="http://en.wikipedia.org/wiki/Tychonoff_plank">Deleted Tychonoff Plank</a><br/></div>
+
+<div id="88" p1="1" p2="1" p3="1" p4="1" p5="0" p6="0" p7="0" p8="0" p9="1" p10="1" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="0" p18="0" p19="0" p20="0" p21="0" p22="2" p23="0" p24="0" p25="0" p26="0" p27="0" p28="0" p29="0" p30="0" p31="0" p32="2" p33="2" p34="0" p35="0" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="2" p55="0" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/81">Alexandroff Plank</a><br/></div>
+
+<div id="89" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="0" p8="0" p9="1" p10="1" p11="1" p12="1" p13="0" p14="0" p15="0" p16="0" p17="0" p18="0" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="0" p27="0" p28="0" p29="0" p30="0" p31="1" p32="0" p33="1" p34="0" p35="0" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="1" p51="1" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="3" p59="3" p60="1"><a href="http://en.wikipedia.org/wiki/Dieudonn%C3%A9_plank">Dieudonné plank</a><br/></div>
+
+<div id="90" p1="1" p2="1" p3="1" p4="1" p5="1" p6="0" p7="0" p8="0" p9="0" p10="1" p11="1" p12="0" p13="0" p14="0" p15="0" p16="0" p17="0" p18="0" p19="1" p20="1" p21="1" p22="1" p23="0" p24="0" p25="0" p26="0" p27="0" p28="0" p29="0" p30="0" p31="0" p32="1" p33="1" p34="0" p35="0" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="0" p49="0" p50="0" p51="1" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="3" p59="3" p60="1"><a href="http://topology.jdabbs.com/spaces/88">Tychonoff Corkscrew</a><br/></div>
+
+<div id="91" p1="1" p2="1" p3="1" p4="1" p5="1" p6="0" p7="0" p8="0" p9="1" p10="1" p11="1" p12="0" p13="0" p14="0" p15="0" p16="0" p17="0" p18="0" p19="0" p20="0" p21="0" p22="2" p23="0" p24="0" p25="0" p26="0" p27="0" p28="0" p29="0" p30="0" p31="2" p32="2" p33="2" p34="0" p35="0" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="0" p51="1" p52="0" p53="0" p54="0" p55="0" p56="2" p57="0" p58="3" p59="3" p60="1"><a href="http://topology.jdabbs.com/spaces/89">Deleted Tychonoff Corkscrew</a><br/></div>
+
+<div id="92" p1="1" p2="1" p3="1" p4="1" p5="1" p6="0" p7="0" p8="0" p9="0" p10="1" p11="1" p12="0" p13="0" p14="0" p15="0" p16="0" p17="0" p18="0" p19="2" p20="2" p21="2" p22="1" p23="0" p24="0" p25="0" p26="2" p27="0" p28="2" p29="2" p30="0" p31="2" p32="2" p33="2" p34="0" p35="0" p36="1" p37="2" p38="2" p39="0" p40="0" p41="2" p42="2" p43="2" p44="2" p45="2" p46="2" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="0" p55="0" p56="2" p57="0" p58="3" p59="3" p60="1"><a href="http://topology.jdabbs.com/spaces/90">Hewitt's Condensed Corkscrew</a><br/></div>
+
+<div id="93" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="0" p8="0" p9="1" p10="1" p11="1" p12="1" p13="0" p14="0" p15="0" p16="0" p17="0" p18="0" p19="0" p20="0" p21="0" p22="0" p23="1" p24="1" p25="0" p26="0" p27="0" p28="0" p29="0" p30="0" p31="1" p32="0" p33="1" p34="0" p35="0" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="1" p51="1" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/91">Thomas' Plank</a><br/></div>
+
+<div id="94" p1="1" p2="1" p3="1" p4="1" p5="1" p6="0" p7="0" p8="0" p9="0" p10="1" p11="1" p12="0" p13="0" p14="0" p15="0" p16="0" p17="0" p18="0" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="0" p27="0" p28="0" p29="0" p30="0" p31="1" p32="0" p33="1" p34="0" p35="0" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="0" p49="0" p50="0" p51="2" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/92">Thomas' Corkscrew</a><br/></div>
+
+<div id="95" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="1" p27="0" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="1" p51="0" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/93">Weak Parallel Line Topology</a><br/></div>
+
+<div id="96" p1="1" p2="1" p3="1" p4="1" p5="0" p6="0" p7="0" p8="0" p9="1" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="0" p18="1" p19="0" p20="0" p21="0" p22="2" p23="0" p24="0" p25="0" p26="1" p27="0" p28="1" p29="1" p30="0" p31="1" p32="0" p33="1" p34="0" p35="0" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="0" p51="0" p52="0" p53="0" p54="2" p55="0" p56="2" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/94">Strong Parallel Line Topology</a><br/></div>
+
+<div id="97" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="0" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="0" p27="0" p28="1" p29="0" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/95">Concentric Circles</a><br/></div>
+
+<div id="98" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="0" p28="0" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="1" p51="1" p52="0" p53="0" p54="0" p55="0" p56="1" p57="1" p58="1" p59="0" p60="1"><a href="http://en.wikipedia.org/wiki/Appert_topology">Appert Space</a><br/></div>
+
+<div id="99" p1="1" p2="1" p3="0" p4="0" p5="0" p6="0" p7="0" p8="0" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="1" p27="0" p28="0" p29="1" p30="1" p31="1" p32="1" p33="1" p34="0" p35="0" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="0" p49="0" p50="0" p51="1" p52="0" p53="0" p54="1" p55="0" p56="1" p57="1" p58="1" p59="0" p60="1"><a href="http://topology.jdabbs.com/spaces/97">Maximal Compact Topology</a><br/></div>
+
+<div id="100" p1="1" p2="1" p3="1" p4="0" p5="0" p6="0" p7="0" p8="0" p9="0" p10="1" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="1" p23="0" p24="0" p25="0" p26="1" p27="1" p28="1" p29="1" p30="0" p31="1" p32="0" p33="1" p34="0" p35="0" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="2" p48="0" p49="0" p50="0" p51="2" p52="0" p53="0" p54="1" p55="0" p56="1" p57="1" p58="1" p59="0" p60="1"><a href="http://topology.jdabbs.com/spaces/98">Minimal Hausdorff Topology</a><br/></div>
+
+<div id="101" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="0" p9="1" p10="1" p11="1" p12="1" p13="1" p14="0" p15="0" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="0" p27="0" p28="0" p29="0" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="1" p37="1" p38="1" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/99">Alexandroff Square</a><br/></div>
+
+<div id="103" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="0" p8="0" p9="1" p10="1" p11="1" p12="1" p13="0" p14="0" p15="0" p16="0" p17="0" p18="0" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="3" p27="0" p28="0" p29="1" p30="0" p31="2" p32="2" p33="2" p34="0" p35="0" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="1" p51="0" p52="0" p53="0" p54="0" p55="0" p56="2" p57="0" p58="3" p59="3" p60="3"><a href="http://topology.jdabbs.com/spaces/100">Uncountable Products of Z^+</a><br/></div>
+
+<div id="104" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="0" p18="0" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="0" p27="0" p28="1" p29="0" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="1" p51="0" p52="0" p53="1" p54="1" p55="1" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/102">Baire Product Metric on R^ω</a><br/></div>
+
+<div id="105" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="0" p9="1" p10="1" p11="1" p12="1" p13="1" p14="0" p15="0" p16="1" p17="1" p18="1" p19="1" p20="0" p21="1" p22="1" p23="1" p24="1" p25="1" p26="1" p27="0" p28="0" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="1" p37="1" p38="1" p39="0" p40="0" p41="1" p42="1" p43="1" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="0" p59="0" p60="1"><a href="http://topology.jdabbs.com/spaces/103">I^I</a><br/></div>
+
+<div id="106" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="0" p8="0" p9="1" p10="1" p11="1" p12="1" p13="0" p14="0" p15="0" p16="0" p17="0" p18="0" p19="1" p20="0" p21="1" p22="1" p23="1" p24="1" p25="0" p26="0" p27="0" p28="0" p29="0" p30="0" p31="0" p32="1" p33="1" p34="0" p35="0" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="0" p59="0" p60="1"><a href="http://topology.jdabbs.com/spaces/104">[0,Ω) x I^I</a><br/></div>
+
+<div id="107" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="0" p9="1" p10="1" p11="1" p12="1" p13="1" p14="0" p15="0" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="1" p27="0" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="1" p37="1" p38="1" p39="0" p40="0" p41="1" p42="1" p43="1" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Helly_space">Helly Space</a><br/></div>
+
+<div id="108" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="0" p18="1" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="1" p37="1" p38="1" p39="0" p40="0" p41="1" p42="1" p43="1" p44="2" p45="2" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="1" p54="1" p55="1" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/106">C[0,1]</a><br/></div>
+
+<div id="109" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="2" p8="2" p9="1" p10="1" p11="1" p12="1" p13="2" p14="2" p15="2" p16="0" p17="0" p18="0" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="0" p27="0" p28="0" p29="0" p30="2" p31="2" p32="2" p33="2" p34="2" p35="2" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Box_topology">Box Product Topology on R^ω</a><br/></div>
+
+<div id="111" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="0" p9="1" p10="1" p11="1" p12="1" p13="1" p14="0" p15="0" p16="1" p17="1" p18="1" p19="1" p20="0" p21="1" p22="1" p23="1" p24="1" p25="1" p26="1" p27="0" p28="0" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="1" p50="1" p51="0" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="0" p59="0" p60="1"><a href="http://en.wikipedia.org/wiki/Stone%E2%80%93%C4%8Cech_compactification">Stone-Čech Compactification of the Integers</a><br/></div>
+
+<div id="112" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="2" p8="2" p9="1" p10="1" p11="1" p12="1" p13="2" p14="2" p15="2" p16="0" p17="0" p18="0" p19="1" p20="2" p21="1" p22="1" p23="2" p24="2" p25="0" p26="1" p27="0" p28="2" p29="1" p30="0" p31="0" p32="1" p33="1" p34="0" p35="0" p36="2" p37="2" p38="2" p39="0" p40="0" p41="2" p42="2" p43="2" p44="2" p45="2" p46="1" p47="1" p48="1" p49="2" p50="1" p51="2" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="2" p59="2" p60="1"><a href="http://topology.jdabbs.com/spaces/109">Novak Space</a><br/></div>
+
+<div id="113" p1="1" p2="1" p3="1" p4="1" p5="0" p6="0" p7="0" p8="0" p9="1" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="0" p18="0" p19="0" p20="0" p21="0" p22="1" p23="0" p24="0" p25="0" p26="1" p27="0" p28="0" p29="1" p30="0" p31="0" p32="2" p33="2" p34="0" p35="0" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="1" p50="0" p51="1" p52="0" p53="0" p54="2" p55="0" p56="2" p57="0" p58="2" p59="2" p60="1"><a href="http://topology.jdabbs.com/spaces/110">Strong Ultrafilter Topology</a><br/></div>
+
+<div id="114" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="0" p28="0" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="1" p50="1" p51="1" p52="0" p53="0" p54="0" p55="0" p56="1" p57="1" p58="1" p59="0" p60="1"><a href="http://topology.jdabbs.com/spaces/111">Single Ultrafilter Topology</a><br/></div>
+
+<div id="115" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="1" p54="1" p55="1" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/112">Nested Rectangles</a><br/></div>
+
+<div id="116" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="1" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="1" p54="1" p55="2" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Topologist%27s_sine_curve">Topologist's Sine Curve</a><br/></div>
+
+<div id="117" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="1" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="1" p54="1" p55="1" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Topologist%27s_sine_curve">Closed Topologist's Sine Curve</a><br/></div>
+
+<div id="118" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="1" p37="1" p38="1" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="1" p54="1" p55="1" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Topologist%27s_sine_curve">Extended Topologist's Sine Curve</a><br/></div>
+
+<div id="119" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="0" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="1" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="1" p54="1" p55="2" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Infinite_broom">The Infinite Broom</a><br/></div>
+
+<div id="120" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="1" p37="1" p38="1" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="1" p54="1" p55="1" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Closed_infinite_broom">The Closed Infinite Broom</a><br/></div>
+
+<div id="121" p1="1" p2="0" p3="0" p4="0" p5="0" p6="0" p7="1" p8="1" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="1" p17="1" p18="1" p19="1" p20="2" p21="1" p22="1" p23="1" p24="1" p25="1" p26="1" p27="2" p28="2" p29="1" p30="1" p31="1" p32="1" p33="1" p34="0" p35="2" p36="1" p37="1" p38="0" p39="0" p40="1" p41="0" p42="0" p43="0" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="2" p52="0" p53="0" p54="2" p55="0" p56="0" p57="1" p58="1" p59="0" p60="1"><a href="http://en.wikipedia.org/wiki/Integer_broom">The Integer Broom</a><br/></div>
+
+<div id="122" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="0" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="1" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="1" p54="1" p55="1" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/119">Nested Angles</a><br/></div>
+
+<div id="123" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="0" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="1" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="1" p54="1" p55="2" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/120">The Infinite Cage</a><br/></div>
+
+<div id="125" p1="1" p2="1" p3="1" p4="2" p5="0" p6="0" p7="0" p8="0" p9="0" p10="2" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="1" p23="0" p24="0" p25="0" p26="1" p27="2" p28="2" p29="1" p30="0" p31="1" p32="0" p33="1" p34="0" p35="0" p36="1" p37="0" p38="0" p39="0" p40="0" p41="2" p42="0" p43="0" p44="2" p45="2" p46="1" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="2" p55="0" p56="2" p57="1" p58="1" p59="0" p60="1"><a href="http://topology.jdabbs.com/spaces/122">Gustin's Sequence Space</a><br/></div>
+
+<div id="126" p1="1" p2="1" p3="1" p4="1" p5="0" p6="0" p7="0" p8="0" p9="0" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="1" p23="0" p24="0" p25="0" p26="1" p27="1" p28="1" p29="1" p30="0" p31="1" p32="0" p33="1" p34="0" p35="0" p36="1" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="1" p45="1" p46="1" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="1" p55="0" p56="0" p57="1" p58="1" p59="0" p60="1"><a href="http://topology.jdabbs.com/spaces/123">Roy's Lattice Space</a><br/></div>
+
+<div id="127" p1="1" p2="1" p3="1" p4="1" p5="0" p6="0" p7="0" p8="0" p9="1" p10="2" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="2" p23="0" p24="0" p25="0" p26="1" p27="1" p28="1" p29="1" p30="0" p31="1" p32="0" p33="1" p34="0" p35="0" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="0" p51="0" p52="0" p53="0" p54="1" p55="0" p56="0" p57="1" p58="1" p59="0" p60="1"><a href="http://topology.jdabbs.com/spaces/124">Roy's Lattice Subspace</a><br/></div>
+
+<div id="128" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="0" p18="1" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="1" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="1" p45="1" p46="2" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="1" p54="1" p55="2" p56="2" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Knaster-Kuratowski_fan">Cantor's Leaky Tent</a><br/></div>
+
+<div id="129" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="0" p18="1" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="0" p49="0" p50="0" p51="0" p52="0" p53="1" p54="1" p55="2" p56="2" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/126">Cantor's Teepee</a><br/></div>
+
+<div id="130" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="1" p17="1" p18="1" p19="1" p20="1" p21="1" p22="1" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="1" p37="0" p38="0" p39="0" p40="0" p41="2" p42="0" p43="0" p44="2" p45="2" p46="1" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="1" p54="1" p55="1" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Pseudo-arc">A Pseudo-Arc</a><br/></div>
+
+<div id="131" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="2" p17="2" p18="1" p19="2" p20="2" p21="2" p22="2" p23="2" p24="2" p25="2" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="1" p37="2" p38="2" p39="0" p40="0" p41="2" p42="2" p43="2" p44="1" p45="0" p46="2" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="1" p54="1" p55="2" p56="2" p57="0" p58="0" p59="2" p60="1"><a href="http://topology.jdabbs.com/spaces/128">Miller's Biconnected Set</a><br/></div>
+
+<div id="132" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="0" p18="0" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="0" p27="0" p28="1" p29="0" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="1" p37="1" p38="1" p39="0" p40="0" p41="1" p42="1" p43="1" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="1" p54="1" p55="1" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/129">Wheel without its Hub</a><br/></div>
+
+<div id="133" p1="1" p2="1" p3="1" p4="1" p5="0" p6="0" p7="0" p8="0" p9="1" p10="0" p11="0" p12="0" p13="0" p14="0" p15="0" p16="0" p17="0" p18="0" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="0" p28="1" p29="1" p30="0" p31="2" p32="2" p33="2" p34="2" p35="2" p36="1" p37="2" p38="2" p39="2" p40="2" p41="2" p42="2" p43="2" p44="2" p45="2" p46="2" p47="2" p48="2" p49="2" p50="2" p51="2" p52="2" p53="2" p54="2" p55="2" p56="2" p57="2" p58="2" p59="2" p60="2"><a href="http://topology.jdabbs.com/spaces/130">Tangora's Connected Space</a><br/></div>
+
+<div id="135" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="1" p18="1" p19="0" p20="0" p21="0" p22="0" p23="1" p24="1" p25="1" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="1" p42="1" p43="1" p44="0" p45="0" p46="1" p47="1" p48="1" p49="1" p50="1" p51="1" p52="1" p53="1" p54="1" p55="1" p56="1" p57="1" p58="1" p59="0" p60="1"><a href="http://topology.jdabbs.com/spaces/131">Sierpinski's Metric Space</a><br/></div>
+
+<div id="136" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="0" p18="1" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="1" p27="1" p28="1" p29="1" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="2" p51="0" p52="0" p53="1" p54="1" p55="2" p56="2" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/132">Duncan's Space</a><br/></div>
+
+<div id="139" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="0" p18="0" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="0" p27="0" p28="1" p29="0" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="0" p37="0" p38="0" p39="0" p40="0" p41="0" p42="0" p43="0" p44="0" p45="0" p46="1" p47="1" p48="1" p49="0" p50="1" p51="1" p52="0" p53="1" p54="1" p55="1" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://en.wikipedia.org/wiki/Post_Office_metric">The Post Office Metric</a><br/></div>
+
+<div id="140" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="0" p18="0" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="0" p27="0" p28="1" p29="0" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="1" p37="1" p38="1" p39="0" p40="0" p41="1" p42="1" p43="1" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="1" p54="1" p55="1" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/134">The Radial Metric</a><br/></div>
+
+<div id="141" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="1" p16="0" p17="0" p18="0" p19="0" p20="0" p21="0" p22="0" p23="0" p24="0" p25="0" p26="0" p27="0" p28="0" p29="0" p30="1" p31="1" p32="1" p33="1" p34="1" p35="1" p36="1" p37="1" p38="1" p39="0" p40="0" p41="1" p42="1" p43="1" p44="0" p45="0" p46="0" p47="0" p48="0" p49="0" p50="0" p51="0" p52="0" p53="0" p54="0" p55="0" p56="1" p57="0" p58="0" p59="1" p60="1"><a href="http://topology.jdabbs.com/spaces/135">Radial Interval Topology</a><br/></div>
+
+<div id="142" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="0" p16="0" p17="0" p18="0" p19="2" p20="2" p21="2" p22="2" p23="2" p24="2" p25="0" p26="0" p27="0" p28="0" p29="0" p30="0" p31="0" p32="2" p33="2" p34="0" p35="0" p36="0" p37="0" p38="0" p39="0" p40="0" p41="2" p42="2" p43="2" p44="2" p45="2" p46="2" p47="2" p48="2" p49="2" p50="2" p51="2" p52="2" p53="0" p54="0" p55="0" p56="1" p57="0" p58="0" p59="0" p60="0"><a href="http://topology.jdabbs.com/spaces/136">Bing's Discrete Extension Space</a><br/></div>
+
+<div id="143" p1="1" p2="1" p3="1" p4="1" p5="1" p6="1" p7="1" p8="1" p9="1" p10="1" p11="1" p12="1" p13="1" p14="1" p15="0" p16="0" p17="0" p18="0" p19="0" p20="0" p21="0" p22="0" p23="2" p24="2" p25="0" p26="0" p27="0" p28="0" p29="0" p30="0" p31="1" p32="1" p33="1" p34="0" p35="0" p36="0" p37="0" p38="0" p39="0" p40="0" p41="2" p42="2" p43="2" p44="2" p45="2" p46="2" p47="2" p48="2" p49="2" p50="2" p51="2" p52="2" p53="0" p54="0" p55="0" p56="2" p57="0" p58="0" p59="0" p60="0"><a href="http://topology.jdabbs.com/spaces/137">Michael's Closed Subspace</a><br/></div>
+</BODY>
+</HTML> 
